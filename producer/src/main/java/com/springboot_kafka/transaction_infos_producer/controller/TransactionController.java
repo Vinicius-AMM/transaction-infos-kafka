@@ -17,7 +17,7 @@ public class TransactionController {
     private KafkaTemplate<String, Transaction> kafkaTemplate;
 
     @PostMapping("/create")
-    public ResponseEntity<Void> createTransaction(@RequestBody Transaction transaction){
+    public ResponseEntity<String> createTransaction(@RequestBody Transaction transaction){
         kafkaTemplate.send("transaction-topic", transaction);
         return ResponseEntity.ok().build();
     }
