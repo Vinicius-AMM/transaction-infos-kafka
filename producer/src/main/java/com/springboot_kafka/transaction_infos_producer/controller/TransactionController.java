@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TransactionController {
 
     @Autowired
-    private KafkaTemplate<String, Object> kafkaTemplate;
+    private KafkaTemplate<String, Transaction> kafkaTemplate;
 
     @PostMapping("/create")
     public ResponseEntity<Void> createTransaction(@RequestBody Transaction transaction){
