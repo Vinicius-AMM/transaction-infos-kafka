@@ -80,6 +80,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>ProducerKafka</finalName>
 	</build>
 
 </project>
